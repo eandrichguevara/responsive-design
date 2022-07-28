@@ -1,0 +1,17 @@
+{
+  "name": "responsive-design",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Responsive",
+    "Design",
+    "HTML",
+    "CSS"
+  ],
+  "author": "Emilio Andrich",
+  "license": "ISC"
+}
