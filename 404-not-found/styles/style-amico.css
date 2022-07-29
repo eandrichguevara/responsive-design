@@ -5,11 +5,11 @@
     font-size: 18px;
     --primary-color: #B36BBF;
     --text-color: #fff; 
-    --text-size-1: 3rem; 
-    --text-size-2: 2rem; 
-    --text-size-3: 1.5rem; 
+    --text-size-1: 2.5rem; 
+    --text-size-2: 1.6rem; 
+    --text-size-3: 1.1rem; 
     --text-size-4: 1rem; 
-    --text-size-5: 0.7rem; 
+    --text-size-5: 0.8rem; 
     --primary-font-family: 'Rubik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -52,13 +52,13 @@ header{
 /* 404 Not Found */
 header .notfound-text{
     margin: 0px 10px;
-    font-size: var(--text-size-3);
+    font-size: var(--text-size-2);
     font-weight: 500;
 }
 
 /* Section */
 section{
-    margin: 10px;
+    padding: 10px;
 }
 
 section article{
@@ -80,9 +80,19 @@ section article .info-container{
     justify-content: center;
 }
 
+/* Titulo de la informacion*/
+section article .info-container span{
+    font-size: var(--text-size-1);
+    font-weight: 700;
+}
 /* Texto menos importante a informar */
 section article .info-container p{
+    font-size: var(--text-size-3);
     opacity: 0.5;
+}
+/* Link en informacion*/
+section article .info-container a{
+    font-size: var(--text-size-4);
 }
 
 /* Footer */
