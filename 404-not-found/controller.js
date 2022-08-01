@@ -19,5 +19,8 @@ head.appendChild(link);
 
 function changeStyle(){
     lastStyle++;
+    if (lastStyle >= styles.length) {
+        lastStyle=0;
+    }
     link.href = styles[lastStyle];
 }
