@@ -84,8 +84,6 @@ a:active{
 /* Header */
 header{
     padding: 5px 10px;
-    display: flex;
-    justify-content: space-between;
 }
 
 /* 404 Not Found */

@@ -18,9 +18,25 @@ link.href = styles[lastStyle];
 head.appendChild(link);
 
 function changeStyle(){
+
+    //Iniciar animacion del boton changeStyle
+    startChangingStyleAnimation()
+
     lastStyle++;
     if (lastStyle >= styles.length) {
         lastStyle=0;
     }
     link.href = styles[lastStyle];
+
+}
+
+function startChangingStyleAnimation(){
+
+    document.getElementById('change-style-button').className="changing-style";
+
+    //Volver al estado inicial al pasar los 0.5 segundos de la animacion
+    setTimeout(() => {
+        document.getElementById('change-style-button').className="";
+    }, 500);
+
 }

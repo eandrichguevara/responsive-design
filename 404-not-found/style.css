@@ -1,6 +1,7 @@
 :root{
     font-size: 14px;
     --primary-color: #B36BBF;
+    --secondary-color: white;
     --text-color: #fff; 
     --text-size-1: 3rem; 
     --text-size-2: 1.6rem; 
@@ -9,4 +10,28 @@
     --img-size: 320px;
     --img-src: url(../images/amico.svg);
     --primary-font-family: 'Rubik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#change-style-button{
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    border: solid 2px var(--primary-color);
+    border-radius: 100%;
+    background: var(--secondary-color) url(./images/exchange.png) no-repeat center;
+}
+
+.changing-style{
+    animation: changeStyle 0.5s;
+}
+
+@keyframes changeStyle{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
