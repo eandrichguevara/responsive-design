@@ -7,69 +7,20 @@
     --primary-color: #B36BBF;
     --secondary-color: white;
     --text-color: #fff; 
-    --text-size-1: 3rem; 
+    --text-size-1: 3.6rem; 
     --text-size-2: 1.6rem; 
     --text-size-3: 1.1rem; 
     --text-size-4: 0.8rem;
-    --img-size: 320px;
+    --img-size: 40rem;
     --img-src: url(../images/amico.svg);
     --primary-font-family: 'Rubik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-@media screen and (orientation: portrait) and (min-width: 380px) {
-    :root{
-        font-size: 20px;
-        --img-size: 320px;
-    }
-}
-
-@media screen and (orientation: portrait) and (min-width: 560px) {
-    :root{
-        font-size: 20px;
-        --img-size: 420px;
-    }
-}
-
-@media screen and (orientation: landscape) {
-    :root{
-        font-size: 12px;
-        --img-size: 120px;
-    }
-}
-
-@media screen and (orientation: landscape) and (min-width: 800px) {
-    :root{
-        font-size: 12px;
-        --img-size: 200px;
-    }
-}
-
-@media screen and (orientation: landscape) and (min-width: 1024px) {
-    :root{
-        font-size: 16px;
-        --img-size: 320px;
-    }
-}
-
-@media screen and (orientation: landscape) and (min-width: 1280px) {
-    :root{
-        font-size: 16px;
-        --img-size: 540px;
-    }
-}
-
-@media screen and (orientation: landscape) and (min-width: 1520px) {
-    :root{
-        font-size: 20px;
-        --img-size: 620px;
-    }
 }
 
 /* Establecer como pagina sin scroll */
 html, body{
     height: 100%;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -97,24 +48,23 @@ a:active{
 }
 
 /* Header */
-header{
-    padding: 5px 10px;
+.title-container{
+    padding: 0.5rem 1rem;
 }
 
 /* 404 Not Found */
-header .notfound-text{
-    margin: 0px 12px;
+.title-container .notfound-text{
     font-size: var(--text-size-2);
     font-weight: 500;
 }
 
 /* Section */
 section{
-    padding: 12px;
+    padding: 1rem;
 }
 
 section article{
-    margin: 4px 8px;
+    margin: 0rem 0.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -149,15 +99,15 @@ section article .info-container a{
 }
 
 /* Footer */
-footer{
-    padding: 4px 12px;
+.reference-container{
+    padding: 0.3rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
 /* Texto que indica a los involucrados directamente en la creacion de esta web o su contenido */
-footer .reference-text{
-    margin: 4px 0px 0px 0px;
+.reference-container .reference-text{
+    margin: 0.2rem 0 0 0;
     font-size: var(--text-size-4);
 }

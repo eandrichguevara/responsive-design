@@ -2,16 +2,16 @@
 
 /* Definir valores iniciales */
 :root{
-    font-size: 20px;
+    font-size: 24px;
     --primary-color: #92E3A9;
     --secondary-color: white;
     --text-color: #263238; 
-    --text-size-1: 3rem; 
+    --text-color-secondary: #263238cc; 
+    --text-size-1: 2.6rem; 
     --text-size-2: 1.6rem; 
     --text-size-3: 1.1rem; 
     --text-size-4: 1rem;
-    --text-size-4-big: 1.1rem;
-    --img-size: 320px;
+    --img-size: 20rem;
     --img-src: url(../images/bro.svg);
     --primary-font-family: 'Mouse Memoirs', sans-serif;
 }
@@ -19,8 +19,8 @@
 /* Establecer como pagina sin scroll */
 html, body{
     height: 100%;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -36,29 +36,47 @@ a{
 }
 
 a:hover{
-    font-size: var(--text-size-4-big);
+    font-size: var(--text-size-4);
 }
 
 a:active{
     color: var(--primary-color);
 }
 
-header{
+/* Header */
+.reference-container{
     width: 100%;
     position: fixed;
-    top: 0;
+    top: -3.8rem;
     background-color: var(--primary-color);
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    transition: all 1s;
 }
 
-header .notfound-text{
-    font-size: var(--text-size-1);
+.reference-container:hover{
+    top: 0;
+}
+
+/* Todos los enlaces dentro del .reference-container*/
+.reference-container a{
+    color: var(--secondary-color);
+}
+
+.reference-container a:active{
+    color: var(--secondary-color);
+}
+
+.reference-container .reference-text{
+    padding: 0.1rem 1rem 0.1rem 0;
+    font-size: var(--text-size-4);
+    transition: all 1s;
 }
 
 section {
     height: 90%;
-    padding: 16px;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,9 +85,19 @@ section {
 section article{
     display: flex;
     flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
+}
+
+section article .info-container span{
+    font-size: var(--text-size-2);
+}
+
+section article .info-container p{
+    font-size: var(--text-size-4);
+    color: var(--text-color-secondary);
 }
 
 /* Img 404 Not Found */
@@ -78,30 +106,33 @@ section article .img-not-found{
     content: var(--img-src);
 }
 
-footer{
+/* Footer */
+.title-container{
     width: 100%;
     position: fixed;
     bottom: 0;
     background-color: var(--primary-color);
     display: flex;
-    flex-direction: column;
-    align-items: end;
+    justify-content: center;
 }
 
-/* Todos los enlaces dentro del footer*/
-footer a{
-    color: var(--secondary-color);
+.title-container .notfound-text{
+    font-size: var(--text-size-1);
 }
 
-footer a:hover{
-    font-size: var(--text-size-4);
+@media screen and (min-width: 315px) {
+    .reference-container{
+        top: -2.6rem;
+    }
 }
 
-footer a:active{
-    color: var(--secondary-color);
+@media screen and (min-width: 384px) {
+    .reference-container{
+        top: 0;
+    }
 }
-
-footer .reference-text{
-    padding: 2px 16px 2px 0px;
-    font-size: var(--text-size-4);
+@media screen and (min-width: 656px){
+    section article .info-container{
+        max-width: 6rem;
+    }
 }
