@@ -52,7 +52,7 @@ a:active{
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: space-around;
-    transition: all 1s;
+    transition: top 1s;
 }
 
 .reference-container:hover{
@@ -71,7 +71,6 @@ a:active{
 .reference-container .reference-text{
     padding: 0.1rem 1rem 0.1rem 0;
     font-size: var(--text-size-4);
-    transition: all 1s;
 }
 
 section {
@@ -120,7 +119,7 @@ section article .img-not-found{
     font-size: var(--text-size-1);
 }
 
-@media screen and (min-width: 315px) {
+@media screen and (min-width: 314px) {
     .reference-container{
         top: -2.6rem;
     }
