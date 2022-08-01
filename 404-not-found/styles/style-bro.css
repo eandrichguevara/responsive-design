@@ -1,16 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+
 /* Definir valores iniciales */
 :root{
-    font-size: 14px;
+    font-size: 20px;
     --primary-color: #92E3A9;
     --secondary-color: white;
-    --text-color: black; 
+    --text-color: #263238; 
     --text-size-1: 3rem; 
     --text-size-2: 1.6rem; 
     --text-size-3: 1.1rem; 
-    --text-size-4: 0.8rem;
+    --text-size-4: 1rem;
+    --text-size-4-big: 1.1rem;
     --img-size: 320px;
     --img-src: url(../images/bro.svg);
-    --primary-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --primary-font-family: 'Mouse Memoirs', sans-serif;
 }
 
 /* Establecer como pagina sin scroll */
@@ -24,11 +27,81 @@ body {
     /* Valores predeterminados para letra y color */
     font-family: var(--primary-font-family);
     color: var(--text-color);
-    
     background-color: var(--secondary-color);
+}
+
+/* Todos los enlaces */
+a{
+    color: var(--primary-color);
+}
+
+a:hover{
+    font-size: var(--text-size-4-big);
+}
+
+a:active{
+    color: var(--primary-color);
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+}
+
+header .notfound-text{
+    font-size: var(--text-size-1);
+}
+
+section {
+    height: 90%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section article{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Img 404 Not Found */
 section article .img-not-found{
+    max-width: var(--img-size);
     content: var(--img-src);
+}
+
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+/* Todos los enlaces dentro del footer*/
+footer a{
+    color: var(--secondary-color);
+}
+
+footer a:hover{
+    font-size: var(--text-size-4);
+}
+
+footer a:active{
+    color: var(--secondary-color);
+}
+
+footer .reference-text{
+    padding: 2px 16px 2px 0px;
+    font-size: var(--text-size-4);
 }
