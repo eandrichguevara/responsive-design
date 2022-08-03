@@ -3,7 +3,7 @@
 
 /* Definir valores iniciales */
 :root{
-    font-size: 16px;
+    font-size: 14px;
     --primary-color: #B36BBF;
     --secondary-color: white;
     --text-color: #fff; 
@@ -11,7 +11,8 @@
     --text-size-2: 1.6rem; 
     --text-size-3: 1.1rem; 
     --text-size-4: 1rem;
-    --img-size: 40rem;
+    --img-height: 40%;
+    --img-max-width: 34rem;
     --img-src: url(../images/amico.svg);
     --primary-font-family: 'Rubik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -65,7 +66,7 @@ section{
 }
 
 section article{
-    margin: 0rem 0.5rem;
+    margin: 0 0.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -73,8 +74,12 @@ section article{
 
 /* Img 404 Not Found */
 section article .img-not-found{
-    max-width: var(--img-size);
+    height: var(--img-height);
+    max-width: var(--img-max-width);
     content: var(--img-src);
+    position: absolute;
+    bottom: 20%;
+    opacity: 0.1;
 }
 
 /* Contenedor del contenido a informar */
@@ -92,11 +97,12 @@ section article .info-container span{
 /* Texto menos importante a informar */
 section article .info-container p{
     font-size: var(--text-size-3);
-    opacity: 0.5;
+    opacity: 0.7;
 }
 /* Link en informacion*/
 section article .info-container a{
     font-size: var(--text-size-4);
+    color: #27343a;
 }
 
 /* Footer */
@@ -111,4 +117,22 @@ section article .info-container a{
 .reference-container .reference-text{
     margin: 0.2rem 0 0 0;
     font-size: var(--text-size-4);
+}
+
+@media screen and (min-width: 400px) and (min-height: 766px){
+    
+    section article .img-not-found{
+        position: initial;
+        opacity: 1;
+    }
+
+}
+
+@media screen and (min-width: 1130px) and (min-height: 640px){
+    
+    section article .img-not-found{
+        position: initial;
+        opacity: 1;
+    }
+
 }

@@ -2,7 +2,7 @@
 
 /* Definir valores iniciales */
 :root{
-    font-size: 24px;
+    font-size: 20px;
     --primary-color: #92E3A9;
     --secondary-color: white;
     --text-color: #263238; 
@@ -11,7 +11,8 @@
     --text-size-2: 1.6rem; 
     --text-size-3: 1.1rem; 
     --text-size-4: 1rem;
-    --img-size: 20rem;
+    --img404-width-landscape: 40%;
+    --img404-width-portrait: 70%;
     --img-src: url(../images/bro.svg);
     --primary-font-family: 'Mouse Memoirs', sans-serif;
 }
@@ -28,6 +29,9 @@ body {
     font-family: var(--primary-font-family);
     color: var(--text-color);
     background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
 }
 
 /* Todos los enlaces */
@@ -46,8 +50,6 @@ a:active{
 /* Header */
 .reference-container{
     width: 100%;
-    position: fixed;
-    top: -3.8rem;
     background-color: var(--primary-color);
     display: flex;
     flex-wrap: wrap-reverse;
@@ -61,11 +63,11 @@ a:active{
 
 /* Todos los enlaces dentro del .reference-container*/
 .reference-container a{
-    color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 .reference-container a:active{
-    color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 .reference-container .reference-text{
@@ -74,16 +76,11 @@ a:active{
 }
 
 section {
-    height: 90%;
     padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 section article{
     display: flex;
-    flex-wrap: wrap;
     flex-wrap: wrap-reverse;
     flex-direction: row-reverse;
     justify-content: center;
@@ -101,15 +98,13 @@ section article .info-container p{
 
 /* Img 404 Not Found */
 section article .img-not-found{
-    max-width: var(--img-size);
+    width: var(--img404-width-portrait);
     content: var(--img-src);
 }
 
 /* Footer */
 .title-container{
     width: 100%;
-    position: fixed;
-    bottom: 0;
     background-color: var(--primary-color);
     display: flex;
     justify-content: center;
@@ -119,19 +114,16 @@ section article .img-not-found{
     font-size: var(--text-size-1);
 }
 
-@media screen and (min-width: 315px) {
-    .reference-container{
-        top: -2.6rem;
+@media screen and (orientation: landscape) {
+    .title-container{
+        visibility: hidden;
     }
-}
 
-@media screen and (min-width: 384px) {
-    .reference-container{
-        top: 0;
-    }
-}
-@media screen and (min-width: 656px){
     section article .info-container{
-        max-width: 6rem;
+        width: 6rem;
+    }
+
+    section article .img-not-found{
+        width: var(--img404-width-landscape);
     }
 }
