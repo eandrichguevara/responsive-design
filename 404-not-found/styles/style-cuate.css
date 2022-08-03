@@ -1,16 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 /* Definir valores iniciales */
 :root{
-    font-size: 14px;
-    --primary-color: #92E3A9;
-    --secondary-color: white;
+    font-size: 22px;
+    --primary-color: #FFC727;
+    --secondary-color: #dbdbdb;
+    --accent-color: black;
     --text-color: black; 
     --text-size-1: 3rem; 
     --text-size-2: 1.6rem; 
     --text-size-3: 1.1rem; 
-    --text-size-4: 0.8rem;
-    --img-size: 320px;
     --img-src: url(../images/cuate.svg);
-    --primary-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --primary-font-family: 'VT323','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Establecer como pagina sin scroll */
@@ -24,11 +25,114 @@ body {
     /* Valores predeterminados para letra y color */
     font-family: var(--primary-font-family);
     color: var(--text-color);
-    
     background-color: var(--secondary-color);
+}
+
+/* Todos los enlaces */
+a{
+    color: var(--primary-color);
+}
+
+a:active{
+    color: var(--primary-color);
+}
+
+/* 404 Not Found text */
+.title-container{
+    width: 100vw;
+    height: var(--text-size-2);
+    padding: 0.3rem 0;
+    background-color: var(--accent-color);
+}
+
+.title-container .notfound-text{
+    font-size: var(--text-size-2);
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 900;
+    position: absolute;
+    animation: scrollToLeft infinite 8s linear;
+}
+
+/* References text */
+.reference-container{
+    width: 650vw;
+    height: var(--text-size-2);
+    padding: 0.3rem 100vw 0.3rem 100vw;
+    background-color: var(--accent-color);
+    position: absolute;
+    top: 2.2rem;
+    display: flex;
+    justify-content: space-evenly;
+    animation: scrollToLeftBig infinite 15s linear;
+}
+
+.reference-container .reference-text{
+    width: 150vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--text-size-2);
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+section{
+    margin: 2.2rem 0.6rem 0 0.6rem;
 }
 
 /* Img 404 Not Found */
 section article .img-not-found{
     content: var(--img-src);
+}
+
+section article .info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section article .info-container span{
+    width: 100%;
+    font-size: var(--text-size-2);
+}
+
+section article .info-container p{
+    width: 100%;
+    font-size: var(--text-size-3);
+    color: var(--text-color-secondary);
+}
+
+section article .info-container a{
+    padding: 0.5rem 1rem;
+    font-size: var(--text-size-3);
+    color: var(--primary-color);
+    background-color: var(--accent-color);
+}
+
+@keyframes scrollToLeft{
+    0%{
+        transform: translateX(100vw);
+    }
+    100%{
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes scrollToLeftBig{
+    0%{
+        transform: translateX(-50vw);
+    }
+    100%{
+        transform: translateX(-700vw);
+    }
+}
+
+@media screen and (orientation: landscape) {
+    
+    section article .img-not-found{
+        height: 4vh;
+    }
+
 }

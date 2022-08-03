@@ -1,7 +1,7 @@
 #change-style-button{
     height: 40px;
     width: 40px;
-    position: fixed;
+    position: absolute;
     right: 10px;
     top: 10px;
     border: solid 2px var(--primary-color);

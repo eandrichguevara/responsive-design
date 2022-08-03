@@ -1,6 +1,6 @@
 var lastStyle = 0;
 const styles = [
-    './styles/style-bro.css',
+    './styles/style-cuate.css',
     './styles/style-amico.css',
     './styles/style-bro.css',
     './styles/style-cuate.css',
