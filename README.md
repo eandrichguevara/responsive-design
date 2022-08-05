@@ -1,4 +1,4 @@
-# Projecto de  Responsive Design
+# Proyecto de  Responsive Design
 
 Este es un proyecto de desarrollo HTML y CSS exclusivamente, donde practico el uso de css y perfecciono mi diseño de interfaces de usuario. En este proyecto se usan iconos e imagenes de uso libre, tambien se incluye en los diseños las referencias de donde fueron proporcionados los recursos.
 
