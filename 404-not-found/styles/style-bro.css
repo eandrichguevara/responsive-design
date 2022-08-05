@@ -17,11 +17,14 @@
     --primary-font-family: 'Mouse Memoirs', sans-serif;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 /* Establecer como pagina sin scroll */
 html, body{
     height: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 body {
@@ -55,6 +58,7 @@ a:active{
     flex-wrap: wrap-reverse;
     justify-content: space-around;
     transition: top 1s;
+    list-style: none;
 }
 
 .reference-container:hover{

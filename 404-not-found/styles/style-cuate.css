@@ -9,16 +9,20 @@
     --text-color: black; 
     --text-size-1: 3rem; 
     --text-size-2: 1.6rem; 
-    --text-size-3: 1.1rem; 
+    --text-size-3: 1.1rem;
+    --text-size-4: 1rem;
     --img-src: url(../images/cuate.svg);
-    --primary-font-family: 'VT323','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --primary-font-family: 'VT323', Monospace, sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
 }
 
 /* Establecer como pagina sin scroll */
 html, body{
     height: 100%;
-    margin: 0px;
-    padding: 0px;
 }
 
 body {
@@ -26,6 +30,9 @@ body {
     font-family: var(--primary-font-family);
     color: var(--text-color);
     background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
 /* Todos los enlaces */
@@ -40,9 +47,12 @@ a:active{
 /* 404 Not Found text */
 .title-container{
     width: 100vw;
-    height: var(--text-size-2);
-    padding: 0.3rem 0;
+    display: flex;
+    justify-content: center;
     background-color: var(--accent-color);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
 }
 
 .title-container .notfound-text{
@@ -50,56 +60,65 @@ a:active{
     color: var(--primary-color);
     text-transform: uppercase;
     font-weight: 900;
-    position: absolute;
-    animation: scrollToLeft infinite 8s linear;
 }
 
 /* References text */
 .reference-container{
-    width: 650vw;
-    height: var(--text-size-2);
-    padding: 0.3rem 100vw 0.3rem 100vw;
+    width: 100vw;
+    height: var(--text-size-3);
+    padding: 0.3rem 0;
     background-color: var(--accent-color);
     position: absolute;
-    top: 2.2rem;
+    overflow: hidden;
     display: flex;
-    justify-content: space-evenly;
-    animation: scrollToLeftBig infinite 15s linear;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    top: calc(var(--text-size-2) - 0.1rem);
 }
 
 .reference-container .reference-text{
-    width: 150vw;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: var(--text-size-2);
-    color: var(--primary-color);
-    text-transform: uppercase;
-    font-weight: 900;
+    margin: 0.3rem;
+    color: var(--secondary-color);
 }
 
 section{
-    margin: 2.2rem 0.6rem 0 0.6rem;
+    margin: 2.2rem 1rem 0 1rem;
+}
+
+section article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
 /* Img 404 Not Found */
 section article .img-not-found{
+    max-height: 60vh;
     content: var(--img-src);
 }
 
 section article .info-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
 }
 
 section article .info-container span{
-    width: 100%;
-    font-size: var(--text-size-2);
+    margin: 0.4rem 0;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: var(--text-size-3);
+    border-right: 2px solid black;
+    animation: 
+        typing 2s steps(40, end),
+        text-cursor 0.75s step-end infinite;
 }
 
 section article .info-container p{
     width: 100%;
+    margin: 0.4rem 0;
     font-size: var(--text-size-3);
     color: var(--text-color-secondary);
 }
@@ -109,30 +128,31 @@ section article .info-container a{
     font-size: var(--text-size-3);
     color: var(--primary-color);
     background-color: var(--accent-color);
+
+    position: relative;
+    margin: auto;
 }
 
-@keyframes scrollToLeft{
-    0%{
-        transform: translateX(100vw);
-    }
-    100%{
-        transform: translateX(-100vw);
-    }
+@keyframes typing {
+    from{width: 0;}
+    to{width: 9em;}
 }
 
-@keyframes scrollToLeftBig{
-    0%{
-        transform: translateX(-50vw);
-    }
-    100%{
-        transform: translateX(-700vw);
-    }
+@keyframes text-cursor {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
 }
 
 @media screen and (orientation: landscape) {
     
-    section article .img-not-found{
-        height: 4vh;
+    section article .info-container{
+        width: 14rem;
     }
+}
 
+@media screen and (min-width: 360px) {
+    
+    section article .info-container span{
+        font-size: var(--text-size-2);
+    }
 }

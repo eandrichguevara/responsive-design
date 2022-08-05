@@ -1,11 +1,10 @@
 var lastStyle = 0;
 const styles = [
-    './styles/style-cuate.css',
     './styles/style-amico.css',
     './styles/style-bro.css',
     './styles/style-cuate.css',
-    './styles/style-pana.css',
-    './styles/style-rafiki.css'
+    //'./styles/style-pana.css',
+    //'./styles/style-rafiki.css'
 ];
 
 var head = document.getElementsByTagName('HEAD')[0]; 
